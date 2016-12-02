@@ -1,0 +1,24 @@
+##########################
+# Name: Leo Gomez        #
+# CruzID: legomez        #
+# Class: CMPS-12M        #
+# Date: Nov 12, 2014     #
+# filename: BUGS         #
+# Details: Information on#
+#  how i fixed list.c    #
+##########################
+//list.c fixes
+
+List of Bugs:
+- on line 24 - line 29, recived an error "Conditional jump or move depends on uninitialised value(s)."
+	in order to correct the error, i cleared the code for the function list_insert2 and
+	replaced it with two list_insert functions because we were assigning local memory
+	to our mallocated memory. now we are connecting our mallocated with mallocated
+	memory.
+- on line 36, the remove function did not take into consideration the used memory in the value that is going
+	to be deleted.  so in order to delete that value, we have a pointer that points to the deleted value
+	frees the memory that was taking up part of the heap.
+- on line 58, our error was that it was only cleared up the begining of the linked list.
+	in order to fix this, we put a while loop to go a pointer, of head, through every node until it
+	reached an end of the point while clearing in between.
+
